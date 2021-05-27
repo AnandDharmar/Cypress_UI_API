@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-27T12:51:10.996Z",
+    "end": "2021-05-27T12:51:11.951Z",
+    "duration": 955,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9a3bc950-4ec5-4aff-ab1c-7ad0a305f7f4",
+      "title": "",
+      "fullFile": "cypress/integration/mocha_api/01_getGenre.spec.js",
+      "file": "cypress/integration/mocha_api/01_getGenre.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "34c4429a-bd9a-4096-9b86-08f74a4af26f",
+          "title": "A simple GET request against an API which provides a list of movie genres",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET -- Successful GET request",
+              "fullTitle": "A simple GET request against an API which provides a list of movie genres GET -- Successful GET request",
+              "timedOut": null,
+              "duration": 488,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', endpoint).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.not.be.null;\n});",
+              "err": {},
+              "uuid": "6ffb2a17-0237-4b89-8cd2-cc0808c4a7ff",
+              "parentUUID": "34c4429a-bd9a-4096-9b86-08f74a4af26f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "GET -- API returns a JSON Response",
+              "fullTitle": "A simple GET request against an API which provides a list of movie genres GET -- API returns a JSON Response",
+              "timedOut": null,
+              "duration": 100,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', endpoint).its('headers').its('content-type').should('include', 'application/json');",
+              "err": {},
+              "uuid": "b86248ff-f53a-46a6-aa0c-511973eb2c1f",
+              "parentUUID": "34c4429a-bd9a-4096-9b86-08f74a4af26f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "GET -- API loads all the default items on the first run",
+              "fullTitle": "A simple GET request against an API which provides a list of movie genres GET -- API loads all the default items on the first run",
+              "timedOut": null,
+              "duration": 82,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "getItems().should('deep.eq', initialItems);",
+              "err": {},
+              "uuid": "5f628cc7-0c31-4017-a5d5-4331781333cb",
+              "parentUUID": "34c4429a-bd9a-4096-9b86-08f74a4af26f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "GET -- API loads 9 items present within the default setup before any insertions and deletions",
+              "fullTitle": "A simple GET request against an API which provides a list of movie genres GET -- API loads 9 items present within the default setup before any insertions and deletions",
+              "timedOut": null,
+              "duration": 94,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "getItems().should('have.length', 9);",
+              "err": {},
+              "uuid": "31739d65-7328-4408-8ae9-19d176f98b5d",
+              "parentUUID": "34c4429a-bd9a-4096-9b86-08f74a4af26f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "GET -- API loads a specific genre based on the id provided",
+              "fullTitle": "A simple GET request against an API which provides a list of movie genres GET -- API loads a specific genre based on the id provided",
+              "timedOut": null,
+              "duration": 106,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', specificValue).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.not.be.null;\n  expect(response.body).property('id').to.equal(1);\n});",
+              "err": {},
+              "uuid": "8ef043cc-7356-47fa-a4d6-127326ec6510",
+              "parentUUID": "34c4429a-bd9a-4096-9b86-08f74a4af26f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6ffb2a17-0237-4b89-8cd2-cc0808c4a7ff",
+            "b86248ff-f53a-46a6-aa0c-511973eb2c1f",
+            "5f628cc7-0c31-4017-a5d5-4331781333cb",
+            "31739d65-7328-4408-8ae9-19d176f98b5d",
+            "8ef043cc-7356-47fa-a4d6-127326ec6510"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 870,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

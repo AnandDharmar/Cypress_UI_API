@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-27T12:51:45.229Z",
+    "end": "2021-05-27T12:52:06.077Z",
+    "duration": 20848,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "911c2dc7-d790-461c-b05a-bd5d874f17ce",
+      "title": "",
+      "fullFile": "cypress/integration/mocha_UI/accountCreation.js",
+      "file": "cypress/integration/mocha_UI/accountCreation.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cba51f92-ab05-45a0-aa32-a24d87725412",
+          "title": "Account creation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register an account",
+              "fullTitle": "Account creation Register an account",
+              "timedOut": null,
+              "duration": 16632,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');\ncy.get('.login').click();\ncy.get('#email_create').type(fakerator.internet.email());\ncy.get('#SubmitCreate > span').click();\ncy.get('#id_gender1').click();\ncy.get('#customer_firstname').type(fakerator.names.firstName());\ncy.get('#customer_lastname').type(fakerator.names.lastName());\ncy.get('#email').clear();\ncy.get('#email').type(fakerator.internet.email());\ncy.get('#passwd').type(fakerator.internet.password(8));\ncy.get('#firstname').type(fakerator.names.firstName());\ncy.get('#address1').type(fakerator.address.street());\ncy.get('#city').type(fakerator.address.city());\ncy.get('#id_state').select('Alabama');\ncy.get('#postcode').type(fakerator.address.postCode());\ncy.get('#phone_mobile').type(fakerator.phone.number());\ncy.get('#submitAccount > span').click();\ncy.get('.page-heading').should('have.text', 'My account');",
+              "err": {},
+              "uuid": "8f9e3bf8-e810-4ac8-86d3-ef5a6b22818f",
+              "parentUUID": "cba51f92-ab05-45a0-aa32-a24d87725412",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8f9e3bf8-e810-4ac8-86d3-ef5a6b22818f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16632,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

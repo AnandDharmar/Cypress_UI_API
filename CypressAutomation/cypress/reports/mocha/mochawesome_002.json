@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-27T12:51:30.823Z",
+    "end": "2021-05-27T12:51:31.114Z",
+    "duration": 291,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "63d762a9-6108-4d50-9fc8-27a6b95dfadf",
+      "title": "",
+      "fullFile": "cypress/integration/mocha_api/03_putGenre.spec.js",
+      "file": "cypress/integration/mocha_api/03_putGenre.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7fbfe5fb-2e5c-47f2-a01b-a1d5d249a937",
+          "title": "A simple PUT request against an API to update a movie genre",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "PUT -- Successful API PUT request",
+              "fullTitle": "A simple PUT request against an API to update a movie genre PUT -- Successful API PUT request",
+              "timedOut": null,
+              "duration": 249,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'PUT',\n  url: specificEndpoint,\n  failOnStatusCode: false,\n  body: this.data.putRequest\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.not.be.null;\n  expect(response.body).property('name').to.equal(this.data.putRequest.name);\n});",
+              "err": {},
+              "uuid": "8be6fd36-4981-450b-80d9-80e1edc9a212",
+              "parentUUID": "7fbfe5fb-2e5c-47f2-a01b-a1d5d249a937",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8be6fd36-4981-450b-80d9-80e1edc9a212"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 249,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
